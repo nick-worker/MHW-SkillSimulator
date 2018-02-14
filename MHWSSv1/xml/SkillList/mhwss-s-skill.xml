@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root name="シリーズスキル">
+	<group name="蛮顎竜の闘志">
+		<item name="奮起" need="2"/>
+		<item name="スタミナ上限突破" need="4"/>
+	</group>
+	<group name="角竜の奥義">
+		<item name="鈍器使い" need="2"/>
+		<item name="無属性強化" need="4"/>
+	</group>
+	<group name="火竜の奥義">
+		<item name="会心撃【属性】" need="2"/>
+		<item name="心眼/弾導強化" need="4"/>
+	</group>
+	<group name="桜火竜の奥義">
+		<item name="毒ダメージ強化" need="3"/>
+	</group>
+	<group name="風漂竜の恩寵">
+		<item name="幸運" need="2"/>
+		<item name="弓溜め段階解放" need="4"/>
+	</group>
+	<group name="惨爪竜の奥義">
+		<item name="抜刀術【力】" need="2"/>
+		<item name="剛刃研磨" need="4"/>
+	</group>
+	<group name="爆鎚竜の守護">
+		<item name="ガード強化" need="3"/>
+	</group>
+	<group name="熔山龍の奥義">
+		<item name="会心撃【特殊】" need="3"/>
+	</group>
+	<group name="滅尽龍の飢餓">
+		<item name="加速再生" need="3"/>
+	</group>
+	<group name="鋼龍の飛翔">
+		<item name="風圧完全無効" need="3"/>
+	</group>
+	<group name="炎王龍の武技">
+		<item name="達人芸" need="3"/>
+	</group>
+	<group name="屍套龍の命脈">
+		<item name="超回復力" need="3"/>
+	</group>
+	<group name="爆鱗竜の守護">
+		<item name="根性" need="3"/>
+	</group>
+	<group name="幻獣の恩寵">
+		<item name="捕獲名人" need="3"/>
+	</group>
+	<group name="冥灯龍の神秘">
+		<item name="業物/弾丸節約" need="3"/>
+	</group>
+</root>

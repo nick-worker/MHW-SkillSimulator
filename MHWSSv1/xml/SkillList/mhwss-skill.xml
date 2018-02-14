@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root name="スキル">
+	<group name="攻撃">
+		<item name="攻撃" limit="7"/>
+		<item name="見切り" limit="7"/>
+		<item name="弱点特攻" limit="3"/>
+		<item name="渾身" limit="3"/>
+		<item name="抜刀術【技】" limit="3"/>
+		<item name="超会心" limit="3"/>
+		<item name="乗り名人" limit="1"/>
+		<item name="飛燕" limit="1"/>
+		<item name="無属性強化" limit="1"/>
+		<item name="剛刃研磨" limit="1"/>
+		<item name="弓溜め段階解放" limit="1"/>
+		<item name="毒瓶追加" limit="1"/>
+		<item name="麻痺瓶追加" limit="1"/>
+		<item name="睡眠瓶追加" limit="1"/>
+		<item name="爆撃瓶追加" limit="1"/>
+		<item name="火事場力" limit="5"/>
+		<item name="死中に活" limit="1"/>
+		<item name="逆恨み" limit="5"/>
+		<item name="不屈" limit="1"/>
+		<item name="フルチャージ" limit="3"/>
+		<item name="力の解放" limit="5"/>
+		<item name="挑戦者" limit="5"/>
+		<item name="匠" limit="5"/>
+		<item name="心眼/弾導強化" limit="1"/>
+		<item name="属性解放/装填拡張" limit="3"/>
+		<item name="砲弾装填数UP" limit="1"/>
+		<item name="砲術" limit="3"/>
+		<item name="集中" limit="3"/>
+		<item name="特殊射撃強化" limit="2"/>
+		<item name="強化持続" limit="3"/>
+		<item name="散弾・剛射強化" limit="1"/>
+		<item name="通常弾・通常矢強化" limit="1"/>
+		<item name="貫通弾・竜の一矢強化" limit="1"/>
+	</group>
+	<group name="属性/異常">
+		<item name="火属性攻撃強化" limit="5"/>
+		<item name="水属性攻撃強化" limit="5"/>
+		<item name="氷属性攻撃強化" limit="5"/>
+		<item name="雷属性攻撃強化" limit="5"/>
+		<item name="龍属性攻撃強化" limit="5"/>
+		<item name="毒属性強化" limit="3"/>
+		<item name="爆破属性強化" limit="3"/>
+		<item name="睡眠属性強化" limit="3"/>
+		<item name="麻痺属性強化" limit="3"/>
+		<item name="龍封力強化" limit="1"/>
+		<item name="KO術" limit="3"/>
+		<item name="破壊王" limit="3"/>
+		<item name="スタミナ奪取" limit="3"/>
+	</group>
+	<group name="防御">
+		<item name="防御" limit="7"/>
+		<item name="体力増強" limit="3"/>
+		<item name="回避性能" limit="5"/>
+		<item name="回避距離UP" limit="3"/>
+		<item name="飛び込み" limit="1"/>
+		<item name="ガード性能" limit="5"/>
+		<item name="ガード強化" limit="1"/>
+		<item name="精霊の加護" limit="3"/>
+		<item name="納刀術" limit="3"/>
+		<item name="潜伏" limit="3"/>
+		<item name="ひるみ軽減" limit="3"/>
+		<item name="回復速度" limit="3"/>
+	</group>
+	<group name="耐性">
+		<item name="火耐性" limit="3"/>
+		<item name="水耐性" limit="3"/>
+		<item name="氷耐性" limit="3"/>
+		<item name="雷耐性" limit="3"/>
+		<item name="龍耐性" limit="3"/>
+		<item name="耳栓" limit="5"/>
+		<item name="風圧耐性" limit="5"/>
+		<item name="耐震" limit="3"/>
+		<item name="裂傷耐性" limit="3"/>
+		<item name="瘴気耐性" limit="3"/>
+		<item name="気絶耐性" limit="3"/>
+		<item name="麻痺耐性" limit="3"/>
+		<item name="毒耐性" limit="3"/>
+		<item name="睡眠耐性" limit="3"/>
+		<item name="水場適応" limit="3"/>
+		<item name="泥耐性" limit="1"/>
+		<item name="瘴気環境適応" limit="1"/>
+		<item name="防御力DOWN耐性" limit="3"/>
+		<item name="熱ダメージ無効" limit="1"/>
+		<item name="爆破やられ耐性" limit="3"/>
+		<item name="属性やられ耐性" limit="3"/>
+	</group>
+	<group name="アイテム">
+		<item name="早食い" limit="3"/>
+		<item name="体力回復量UP" limit="3"/>
+		<item name="スリンガー装填数UP" limit="3"/>
+		<item name="アイテム使用強化" limit="3"/>
+		<item name="キノコ大好き" limit="3"/>
+		<item name="こやし名人" limit="1"/>
+		<item name="満足感" limit="1"/>
+		<item name="広域化" limit="5"/>
+		<item name="砥石使用高速化" limit="3"/>
+		<item name="笛吹き名人" limit="1"/>
+		<item name="肉焼き名人" limit="1"/>
+		<item name="閃光強化" limit="1"/>
+		<item name="ボマー" limit="3"/>
+		<item name="整備" limit="3"/>
+	</group>
+	<group name="クエスト">
+		<item name="クライマー" limit="1"/>
+		<item name="しゃがみ移動速度UP" limit="1"/>
+		<item name="研究者" limit="1"/>
+		<item name="オトモへの采配" limit="3"/>
+		<item name="スタミナ急速回復" limit="3"/>
+		<item name="ジャンプ鉄人" limit="1"/>
+		<item name="ハニーハンター" limit="1"/>
+		<item name="ランナー" limit="3"/>
+		<item name="体術" limit="5"/>
+		<item name="剥ぎ取り鉄人" limit="1"/>
+		<item name="地質学" limit="3"/>
+		<item name="威嚇" limit="3"/>
+		<item name="導蟲反応距離UP" limit="1"/>
+		<item name="感知" limit="1"/>
+		<item name="採集の達人" limit="1"/>
+		<item name="探索者の幸運" limit="1"/>
+		<item name="昆虫標本の達人" limit="3"/>
+		<item name="植生学" limit="4"/>
+		<item name="滑走強化" limit="1"/>
+		<item name="綿帽子草の知識" limit="3"/>
+		<item name="腹減り耐性" limit="3"/>
+		<item name="追跡の達人" limit="1"/>
+		<item name="運搬の達人" limit="1"/>
+		<item name="釣り名人" limit="1"/>
+		<item name="砲撃手" limit="3"/>
+	</group>
+</root>
