@@ -81,6 +81,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="xml\SkillList\mhwss-s-skill.xml" />
+    <Content Include="xml\SkillList\mhwss-skill-desc.xml" />
     <Content Include="xml\SkillList\mhwss-skill.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

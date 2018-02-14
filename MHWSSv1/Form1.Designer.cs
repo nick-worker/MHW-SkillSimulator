@@ -39,7 +39,7 @@
             // 
             this.treeView1.Location = new System.Drawing.Point(12, 12);
             this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(204, 353);
+            this.treeView1.Size = new System.Drawing.Size(204, 371);
             this.treeView1.TabIndex = 0;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             // 
@@ -49,7 +49,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(222, 130);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 21;
-            this.dataGridView1.Size = new System.Drawing.Size(293, 235);
+            this.dataGridView1.Size = new System.Drawing.Size(438, 253);
             this.dataGridView1.TabIndex = 1;
             // 
             // listBox1
@@ -75,7 +75,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(820, 449);
+            this.ClientSize = new System.Drawing.Size(1395, 662);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.dataGridView1);

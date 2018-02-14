@@ -12,6 +12,8 @@ namespace MHWSSv1
         protected string name;
         protected string limit;
         protected string need;
+        protected string level;
+        protected string desc;
 
         public SkillNodeInfo()
         {
@@ -19,6 +21,8 @@ namespace MHWSSv1
             name = null;
             limit = "0";
             need = "0";
+            level = "0";
+            desc = null;
         }
 
         public string Type
@@ -43,6 +47,18 @@ namespace MHWSSv1
         {
             get { return need; }
             set { need = value; }
+        }
+
+        public string Level
+        {
+            get { return level; }
+            set { level = value; }
+        }
+
+        public string Desc
+        {
+            get { return desc; }
+            set { desc = value; }
         }
     }
 }

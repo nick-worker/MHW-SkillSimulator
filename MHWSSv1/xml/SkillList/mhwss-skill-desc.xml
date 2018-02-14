@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<skill name="攻撃">
+  <item level="1" desc="基礎攻撃力+3"/>
+  <item level="2" desc="基礎攻撃力+6"/>
+  <item level="3" desc="基礎攻撃力+9"/>
+  <item level="4" desc="基礎攻撃力+12,会心率+5%"/>
+  <item level="5" desc="基礎攻撃力+15,会心率+5%"/>
+  <item level="6" desc="基礎攻撃力+18,会心率+5%"/>
+  <item level="7" desc="基礎攻撃力+21,会心率+5%"/>
+</skill>
