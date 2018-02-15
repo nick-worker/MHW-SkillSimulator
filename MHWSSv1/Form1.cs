@@ -29,10 +29,15 @@ namespace MHWSSv1
             skillLevelDesc = new Dictionary<int, String>();
             selectedSkill = new Dictionary<String, int>();
 
+            // ウィンドウタイトルの設定
             this.Text = "MHWSS v1";
+            // ボタン1のテキスト設定
             button1.Text = "追加";
+            // スキルツリーXML読み込み
             ImportSkillXml("../../xml/SkillList/mhwss-skill.xml");
+            // スキル詳細XML読み込み
             ImportSkillDescXml("../../xml/SkillList/mhwss-skill-desc.xml");
+            // 選択済みスキルのグリッドビュー設定
             SettingDataGridView1();
         }
 
