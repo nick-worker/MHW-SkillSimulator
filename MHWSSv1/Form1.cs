@@ -25,6 +25,8 @@ namespace MHWSSv1
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            SQLTest.createTableTest();
+
             skillMap = new Dictionary<String, IDictionary<int, String>>();
             skillLevelDesc = new Dictionary<int, String>();
             selectedSkill = new Dictionary<String, int>();
