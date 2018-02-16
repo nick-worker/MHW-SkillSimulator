@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.SQLite;
 using System.Xml;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -36,11 +37,34 @@ namespace MHWSSv1
             // ボタン1のテキスト設定
             button1.Text = "追加";
             // スキルツリーXML読み込み
-            ImportSkillXml("../../xml/SkillList/mhwss-skill.xml");
+            //            ImportSkillXml("../../xml/SkillList/mhwss-skill.xml");
             // スキル詳細XML読み込み
-            ImportSkillDescXml("../../xml/SkillList/mhwss-skill-desc.xml");
+            //            ImportSkillDescXml("../../xml/SkillList/mhwss-skill-desc.xml");
+            createSkillTree();
             // 選択済みスキルのグリッドビュー設定
             SettingDataGridView1();
+        }
+
+        private void createSkillTree()
+        {
+            SQLiteDataReader selectSkillList = 
+                SQLUtill.select("SELECT SC.SKILL_CAT_NAME,SL.SKILL_NAME,SL.SKILL_TYPE,SL.SKILL_DESC FROM SKILL_LIST SL" +
+                                " INNER JOIN SKILL_CATEGORY SC ON SL.SKILL_CAT_ID = SC.SKILL_CAT_ID" +
+                                " ORDER BY SL.SKILL_ID, SL.SKILL_CAT_ID");
+
+            TreeNode rootTreeNodeNSkill = new TreeNode("スキル");
+            TreeNode rootTreeNodeNSSkill = new TreeNode("シリーズスキル");
+//            rootTreeNodeNSkill.Tag = "スキル";
+//            rootTreeNodeNSSkill.Tag = "シリーズスキル";
+
+//            while (selectSkillList.Read())
+//           {
+//
+//
+//            }
+            treeView1.Nodes.Add(rootTreeNodeNSkill);
+            treeView1.Nodes.Add(rootTreeNodeNSSkill);
+
         }
 
         /*
