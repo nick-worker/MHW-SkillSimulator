@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Data.SQLite;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace MHWSSv1
 {
     class SQLUtill
     {
-        public static SQLiteDataReader select(string sqlSentence)
+        public static DataTable select(string sqlSentence)
         {
             SQLiteDataReader returnObect = null;
             var sqlConnectionSb = new SQLiteConnectionStringBuilder { DataSource = "mhwss.db" };
@@ -21,12 +22,19 @@ namespace MHWSSv1
                 using (var cmd = new SQLiteCommand(cn))
                 {
                     cmd.CommandText = sqlSentence;
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
 
-                    returnObect = cmd.ExecuteReader();
+                    DataTable data = new DataTable();
+                    adapter.Fill(data);
+
+                    //returnObect = cmd.ExecuteReader();
+
+                    cn.Close();
+                    //return cmd.ExecuteReader();
+                    return data;
                 }
 
-                cn.Close();
-                return returnObect;
+
             }
         }
     }

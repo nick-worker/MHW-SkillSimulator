@@ -47,24 +47,86 @@ namespace MHWSSv1
 
         private void createSkillTree()
         {
-            SQLiteDataReader selectSkillList = 
+            DataTable skillCategory =
+                SQLUtill.select("SELECT SKILL_CAT_NAME FROM SKILL_CATEGORY");
+
+            DataTable skillNData = 
                 SQLUtill.select("SELECT SC.SKILL_CAT_NAME,SL.SKILL_NAME,SL.SKILL_TYPE,SL.SKILL_DESC FROM SKILL_LIST SL" +
                                 " INNER JOIN SKILL_CATEGORY SC ON SL.SKILL_CAT_ID = SC.SKILL_CAT_ID" +
+                                " WHERE SL.SKILL_TYPE = 'N'" +
+                                " ORDER BY SL.SKILL_ID, SL.SKILL_CAT_ID");
+
+            DataTable skillSData =
+                SQLUtill.select("SELECT SC.SKILL_CAT_NAME,SL.SKILL_NAME,SL.SKILL_TYPE,SL.SKILL_DESC FROM SKILL_LIST SL" +
+                                " INNER JOIN SKILL_CATEGORY SC ON SL.SKILL_CAT_ID = SC.SKILL_CAT_ID" +
+                                " WHERE SL.SKILL_TYPE = 'S'" +
                                 " ORDER BY SL.SKILL_ID, SL.SKILL_CAT_ID");
 
             TreeNode rootTreeNodeNSkill = new TreeNode("スキル");
-            TreeNode rootTreeNodeNSSkill = new TreeNode("シリーズスキル");
-//            rootTreeNodeNSkill.Tag = "スキル";
-//            rootTreeNodeNSSkill.Tag = "シリーズスキル";
+            TreeNode rootTreeNodeSSkill = new TreeNode("シリーズスキル");
+            //            rootTreeNodeNSkill.Tag = "スキル";
+            //            rootTreeNodeNSSkill.Tag = "シリーズスキル";
 
-//            while (selectSkillList.Read())
-//           {
-//
-//
-//            }
+
+            foreach (DataRow skillCatRow in skillCategory.Rows)
+            {
+                Boolean skillTypeNFlg = false;
+                Boolean skillTypeSFlg = false;
+
+                string skillCategoryName = skillCatRow["SKILL_CAT_NAME"].ToString();
+                TreeNode categoryNode = new TreeNode(skillCategoryName);
+
+                // "スキル"ツリー構成
+                foreach(DataRow skillRow in skillNData.Rows)
+                {
+                    if (skillCategoryName.Equals(skillRow["SKILL_CAT_NAME"].ToString()))
+                    {
+                        skillTypeNFlg = true;
+
+                        TreeNode skillNode = new TreeNode(skillRow["SKILL_NAME"].ToString());
+                        categoryNode.Nodes.Add(skillNode);
+
+                    }
+                }
+                if(skillTypeNFlg == true)
+                {
+                    rootTreeNodeNSkill.Nodes.Add(categoryNode);
+                }
+
+                // "シリーズスキル"ツリー構成
+                foreach (DataRow skillRow in skillSData.Rows)
+                {
+                    if (skillCategoryName.Equals(skillRow["SKILL_CAT_NAME"].ToString()))
+                    {
+                        skillTypeSFlg = true;
+
+                        TreeNode skillNode = new TreeNode(skillRow["SKILL_NAME"].ToString());
+                        categoryNode.Nodes.Add(skillNode);
+                    }
+                }
+                if(skillTypeSFlg == true)
+                {
+                    rootTreeNodeSSkill.Nodes.Add(categoryNode);
+
+                }
+
+            }
             treeView1.Nodes.Add(rootTreeNodeNSkill);
-            treeView1.Nodes.Add(rootTreeNodeNSSkill);
+            treeView1.Nodes.Add(rootTreeNodeSSkill);
 
+        }
+
+        private List<string> createSkillList(string skillCategory, DataTable skillData)
+        {
+            List<string> skillList = new List<string>();
+            foreach(DataRow rowData in skillData.Rows)
+            {
+                if(rowData["SKILL_CAT_NAME"].ToString() == skillCategory)
+                {
+                    skillList.Add(rowData["SKILL_NAME"].ToString());
+                }
+            }
+            return skillList;
         }
 
         /*
@@ -280,18 +342,18 @@ namespace MHWSSv1
             IDictionary<int, String> skillLevelDescMap = new Dictionary<int, String>();
 
             // itemの情報のみlistBox1にセット
-            if(treeSni.Type == "skill")
-            {
+//            if(treeSni.Type == "skill")
+//            {
                 // 選択可能なスキルレベル分行を追加
-                int limit = int.Parse(treeSni.Limit);
-                for(int i = 0; i < limit; i++)
-                {
+//                int limit = int.Parse(treeSni.Limit);
+//                for(int i = 0; i < limit; i++)
+//                {
                     // int j = limit - i;
-                    int j = i + 1;
-                    listBox1.Items.Add(treeSni.Name + " Lv." + j);
-                }
-                selectedSkillName = treeSni.Name;
-            }
+//                    int j = i + 1;
+//                    listBox1.Items.Add(treeSni.Name + " Lv." + j);
+//                }
+//                selectedSkillName = treeSni.Name;
+ //           }
         }
 
         /*
